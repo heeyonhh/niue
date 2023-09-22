@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+
+import { Nav } from "./components/data";
+import Home from "./route/Home";
+import About from "./route/About";
+import Booking from "./route/Booking";
+import Collection from "./route/Collection";
+import Contact from "./route/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Link to="/" className="logo">niuekeem</Link>
+      <div className="tokakao"></div>
+      <nav className="nav">
+        {Nav.map((nav, i) => (
+          <Link key={i} className="menu" to={nav.id}>
+            {nav.title}
+          </Link>
+        ))}
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/collection" element={<Booking />} />
+        <Route path="/booking" element={<Collection />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
