@@ -11,7 +11,11 @@
     <title>_____niuekeem</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      if (window.location.pathname !== '/') {
+          window.location.href = '/'; // Redirect to the root URL
+      }
+  </script>
   </body>
 </html>
