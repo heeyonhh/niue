@@ -6,10 +6,10 @@ function Home() {
     <header id="home">
       <div className="intro">
         <div className="intro_img1">
-          <img src="/img/19.jpeg" alt="intro_img1" />
+          <img src="https://heeyonhh.github.io/niue/img/19.jpeg" alt="intro_img1" />
         </div>
         <div className="intro_img2">
-          <img src="/img/7.jpeg" alt="intro_img2" />
+          <img src="https://heeyonhh.github.io/niue/img/7.jpeg" alt="intro_img2" />
         </div>
       </div>
       <div className="introtext_wrap">
