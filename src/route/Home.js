@@ -1,9 +1,10 @@
 import React from "react";
 import "../App.css";
+import { Introtext, Sectiontext, Footer1, Footer2 } from "../components/data";
 
 function Home() {
   return (
-    <header id="home">
+    <div id="home">
       <div className="intro">
         <div className="intro_img1">
           <img src="/img/19.jpeg" alt="intro_img1" />
@@ -13,11 +14,37 @@ function Home() {
         </div>
       </div>
       <div className="introtext_wrap">
-        <div className="introtext">
-          Once upon a time in a small town nestled among rolling hills, 👰🏻‍♀️🩷🤵🏻 two souls embarked on a journey of love that would culminate in a magical wedding day. 💍 This is the story of jiji and jojo, a love story that has been years in the making. 🎀
-        </div>
+        <div className="introtext">{Introtext}</div>
       </div>
-    </header>
+      <section>
+        <div className="section_left">
+          <img src="/img/2.jpeg" alt="section_left_img" />
+        </div>
+        <div className="section_right">
+          {Sectiontext.map((text, i) => (
+            <div key={i} className="section_text">
+              {text}
+            </div>
+          ))}
+        </div>
+      </section>
+      <footer>
+        <div className="footer_left">
+          {Footer1.map((item, index) => (
+            <div key={index} className="footer_left_text">
+              {item}
+            </div>
+          ))}
+        </div>
+        <div className="footer_right">
+          {Footer2.map((item, index) => (
+            <div key={index} className="footer_right_text">
+              {item}
+            </div>
+          ))}
+        </div>
+      </footer>
+    </div>
   );
 }
 

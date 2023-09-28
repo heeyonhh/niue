@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
 @font-face {
   font-family: 'Mori-SemiBold', sans-serif;
   src: url(../src/font/PPMori-SemiBold.otf);
@@ -112,7 +114,7 @@ body{
 /* 홈 */
 #home{
   width: 100%;
-  height: 200vh;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -147,4 +149,56 @@ body{
   /* font-family: 'Mori-SemiBold', sans-serif; */
   /* font-family: 'RadioGrotesk', sans-serif; */
   font-size: 4rem;
+}
+
+/* 섹션 */
+section{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  cursor: pointer;
+}
+
+.section_left{
+  width: 50%;
+  overflow: hidden;
+}
+
+.section_left img{
+  background-size: cover;
+}
+
+.section_right{
+  padding-left: 30px;
+  width: 50%;
+  background-color: #cab8c4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section_text{
+  font-size: 2.7rem;
+}
+
+footer{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+}
+
+.footer_left, .footer_right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_left_text, .footer_right_text{
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
 }
